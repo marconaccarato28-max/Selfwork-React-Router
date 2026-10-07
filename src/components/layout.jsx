@@ -1,18 +1,8 @@
-import { Link, Outlet } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import router from "./routing/router.jsx";
 
-function Layout() {
-return (
-<>
-<nav>
-<Link to="/">Home</Link>{" "}
-<Link to="/posts">Posts</Link>{" "}
-<Link to="/login">Login</Link>{" "}
-<Link to="/register">Register</Link>
-</nav>
-
-<Outlet />
-</>
-);
+function App() {
+return <RouterProvider router={router} />;
 }
 
-export default Layout;
+export default App;
